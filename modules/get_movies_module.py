@@ -3,9 +3,8 @@ import json
 import requests 
 from modules import get_info_modules
 
-def get_movie_data(api_key):
-
-    df = pd.read_csv("../data/letterboxd/watched.csv")
+def get_movie_data(api_key, df, csv_name):
+    print(f"Colleting data from {csv_name}.csv")
     df = df.drop(["Letterboxd URI"], axis=1)
 
     df['id'] = 0
@@ -54,4 +53,4 @@ def get_movie_data(api_key):
             df.loc[i, 'spoken_languages_full'] = get_info_modules.get_info(json_format, "spoken_languages", "english_name")
             print(f"Data collected data from {title}")
 
-    df.to_csv("../data/created/exported_tmdb.csv",header=True, index = False)
+    df.to_csv(f"../data/created/exported_tmdb_{csv_name}.csv",header=True, index = False)

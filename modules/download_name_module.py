@@ -38,15 +38,7 @@ def join_of_databases(unique_directors, tmp, value):
     total_size = dir.shape[0]
     print(f"Inner join finished. \nOriginal data size: {total_size}\nData size now: {df.shape[0]}\n...")
     return df
-'''
-def verify_not_valid(unique_directors, tmp):
-    print("Verifying not valid ids")
-    dir = pd.DataFrame(unique_directors, columns=["id_directors"])
-    not_valid = pd.merge(dir, tmp, left_on="id_directors", right_on="nconst", how="outer", indicator=True
-            ).query('_merge=="left_only"')
-    print("Verification completed, returning dataset as 'not_valid'")
-    return not_valid
-'''
+
 
 def start_download(to_download):
     print(f"\nStarting now {to_download} download and merge\n...")
@@ -71,12 +63,22 @@ def start_download(to_download):
     except:
         print("Wasn't able to remove downloaded file.")
 
-    '''
-    used the verify_not_valid and found this
-    Verifying not valid ids
-    Verification completed, returning dataset as 'not_valid'
-    id_directors nconst primaryName birthYear deathYear primaryProfession knownForTitles     _merge
-    0           N    NaN         NaN       NaN       NaN               NaN            NaN  left_only
-    '''
+'''
+def verify_not_valid(unique_directors, tmp):
+    print("Verifying not valid ids")
+    dir = pd.DataFrame(unique_directors, columns=["id_directors"])
+    not_valid = pd.merge(dir, tmp, left_on="id_directors", right_on="nconst", how="outer", indicator=True
+            ).query('_merge=="left_only"')
+    print("Verification completed, returning dataset as 'not_valid'")
+    return not_valid
+'''
+
+'''
+used the verify_not_valid and found this
+Verifying not valid ids
+Verification completed, returning dataset as 'not_valid'
+id_directors nconst primaryName birthYear deathYear primaryProfession knownForTitles     _merge
+0           N    NaN         NaN       NaN       NaN               NaN            NaN  left_only
+'''
 
     

@@ -41,7 +41,7 @@ def start_download(value):
     download_file(url)
     filename = url.split("/")[-1]
     tmp = extract_and_join(filename)
-    exported_name = "../data/created/exported_tmdb.csv"
+    exported_name = "../data/created/exported_tmdb_final.csv"
     df, not_valid = merge_exported_downloaded(exported_name, tmp)
     if not_valid > 0:
         not_valid = verify_not_valid(exported_name, tmp)
