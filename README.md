@@ -1,4 +1,4 @@
-# letterboxd_creation_analysis
+# Letterboxd data creation and extraction 
 
 ## Ideia norteadora	
 Em sintexe, a ideia do projeto é automatizar a extração, limpeza e exploração de dados de filmes assistidos.
