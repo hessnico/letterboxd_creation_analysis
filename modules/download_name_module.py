@@ -26,7 +26,7 @@ def get_list_unique(dataset, value):
         for j in range(len(lst)):
             if unique_director.count(lst[j]) < 1:
                 unique_director.append(lst[j])
-                i += 1
+    print(f"Total {value}: {len(unique_director)}")
     
     print(f"{value} data retrieved")
     return unique_director
@@ -52,7 +52,7 @@ def start_download(to_download):
         unique_p.sort()
         df = join_of_databases(unique_p, tmp, value)
         try:    
-            df.to_csv(f"../data/imdb/{to_download}_{value}.csv",header=True, index = False)
+            df.to_csv(f"../data/imdb/{value}_dataset.csv",header=True, index = False)
             print("Dataframe with ids saved")
         except:
             print("Error.")
