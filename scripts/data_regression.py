@@ -89,7 +89,7 @@ watched = watched.merge(words, left_index=True, right_index=True)
 x_data = watched.drop(["my_rating", "title", "overview", "Watched"], axis=1)
 y_data = watched.loc[:, "my_rating"]
 
-x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, random_state=0, test_size=0.15)
+x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, random_state=111, test_size=0.2)
 
 classifiers = [ 
     RandomForestRegressor()
