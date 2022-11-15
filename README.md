@@ -27,8 +27,8 @@
 # About The Project
 The ideia of the project is to automate extraction, cleaning and exploratory data analysis of my logged movies in Letterboxd.
 The project consists in the extraction of data utilizing TMDB's API from my `watched.csv` exported in Letterboxd's site, the automatic creation of hashmaps from IMDb's open datasets, and finally, in the cleaning of data using, mostly, the Pandas library from Python. 
-Lastly, the cleaned data can be used for exploratory data analysis, for data regression and a lot more. 
-Basically, the exported table is like this: <br>
+Lastly, the cleaned data can be used for exploratory data analysis, for data regression and a lot more. <br>
+Basically, the exported table is like this: <br><br>
 ![First table](./documentation/first.PNG) <br>
 Final table:
 ![Final table](./documentation/second.PNG)
