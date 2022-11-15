@@ -80,6 +80,20 @@ For installation of Python library
 	python index.py
 	```
 
+### Project structure
+
+```bash
+├── get_movies_data.py
+├── concat_watched_watchlist.py
+├── download_imdb_tables.py
+├── download_imdb_tables.py
+├── download_name_data.py
+├── concat_info_movie.py
+├── get_ratings.py
+├── clean_data.py
+├── data_regression.py
+```
+
 <!-- Outputs -->
 ## Outputs 
 During the execution of `index.py` is generated a lot of csv tables.  Generated in `/data/imdb` is the two hashmaps called `directors_dataset.csv` and `writers_directors.csv`, they have the persons id in IMDb and name, also in the same folder is the two tables with not found or invalid movie's ids. <br>
